@@ -8,8 +8,7 @@ class ContactsForm extends StatefulWidget {
 
 class _ContactsFormState extends State<ContactsForm> {
   final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _accountNumberController =
-      TextEditingController();
+  final TextEditingController _accountNumberController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -53,9 +52,8 @@ class _ContactsFormState extends State<ContactsForm> {
                   ),
                   onPressed: () {
                     final String name = _nameController.text;
-                    final int accountNumber =
-                        int.tryParse(_accountNumberController.text);
-                    final Contact newContact = Contact(name, accountNumber);
+                    final int accountNumber = int.tryParse(_accountNumberController.text);
+                    final Contact newContact = Contact(0, name, accountNumber);
                     Navigator.pop(context, newContact);
                   },
                 ),
