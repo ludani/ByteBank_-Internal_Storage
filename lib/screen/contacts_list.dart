@@ -1,3 +1,4 @@
+import 'package:bankbyte/database/dao/contact_dao.dart';
 import 'package:bankbyte/models/contact.dart';
 import 'package:bankbyte/screen/contacts_form.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ class ContactsList extends StatefulWidget {
 }
 
 class _ContactsListState extends State<ContactsList> {
+  final ContactDao _dao = ContactDao();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +19,7 @@ class _ContactsListState extends State<ContactsList> {
       ),
       body: FutureBuilder(
         initialData: List(),
-        future: findAll(),
+        future: _dao.findAll(),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.none:
