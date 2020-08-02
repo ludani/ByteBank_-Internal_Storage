@@ -1,3 +1,4 @@
+import 'package:bankbyte/database/app_database.dart';
 import 'package:bankbyte/models/contact.dart';
 import 'package:flutter/material.dart';
 
@@ -54,7 +55,7 @@ class _ContactsFormState extends State<ContactsForm> {
                     final String name = _nameController.text;
                     final int accountNumber = int.tryParse(_accountNumberController.text);
                     final Contact newContact = Contact(0, name, accountNumber);
-                    Navigator.pop(context, newContact);
+                    save(newContact).then((id) => Navigator.pop(context));
                   },
                 ),
               ),
