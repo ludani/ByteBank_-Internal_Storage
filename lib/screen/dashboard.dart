@@ -17,41 +17,65 @@ class Dashboard extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Image.asset('lib/images/bytebank_logo.png'),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Material(
-              color: Theme.of(context).primaryColor,
-              child: InkWell(
-                onTap: () {
-                  Navigator.of(context).push((MaterialPageRoute(
-                    builder: (context) => ContactsList(),
-                  )));
-                },
-                child: Container(
-                  height: 100,
-                  width: 150,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.people,
-                        color: Colors.white,
-                        size: 24.0,
-                      ),
-                      Text(
-                        'Contacts',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+          Row(
+            children: <Widget>[
+              _FeatureItem(
+                'Transfer',
+                Icons.monetization_on,
               ),
-            ),
+              _FeatureItem(
+                'Transaction Feed',
+                Icons.description,
+              )
+            ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _FeatureItem extends StatelessWidget {
+  final String name;
+  final IconData icon;
+
+  _FeatureItem(this.name, this.icon);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Material(
+        color: Theme.of(context).primaryColor,
+        child: InkWell(
+          onTap: () {
+            Navigator.of(context).push((MaterialPageRoute(
+              builder: (context) => ContactsList(),
+            )));
+          },
+          child: Container(
+            height: 100,
+            width: 150,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Icon(
+                  icon,
+                  color: Colors.white,
+                  size: 24.0,
+                ),
+                Text(
+                  name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

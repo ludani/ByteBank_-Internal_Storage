@@ -1,5 +1,5 @@
 import 'package:bankbyte/database/dao/contact_dao.dart';
-import 'package:bankbyte/models/contact.dart';
+
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
