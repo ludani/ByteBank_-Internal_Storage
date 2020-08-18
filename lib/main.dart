@@ -1,3 +1,4 @@
+import 'package:bankbyte/http/webclient.dart';
 import 'package:bankbyte/models/contact.dart';
 import 'package:bankbyte/screen/dashboard.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:bankbyte/database/app_database.dart';
 
 void main() {
   runApp(BytebankApp());
+  findAll();
 }
 
 class BytebankApp extends StatelessWidget {
