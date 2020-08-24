@@ -31,7 +31,7 @@ class _ContactsListState extends State<ContactsList> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     CircularProgressIndicator(),
-                    Text('Loagind'),
+                    Text('Loading'),
                   ],
                 ),
               );
