@@ -1,9 +1,8 @@
-import 'package:bankbyte/http/webclient.dart';
+import 'package:bankbyte/http/app_database.dart';
 import 'package:bankbyte/models/contact.dart';
 import 'package:bankbyte/screen/dashboard.dart';
 import 'package:bankbyte/screen/transaction.dart';
 import 'package:flutter/material.dart';
-import 'package:bankbyte/database/app_database.dart';
 
 void main() {
   runApp(BytebankApp());

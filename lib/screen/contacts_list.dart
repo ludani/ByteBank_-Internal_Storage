@@ -4,7 +4,6 @@ import 'package:bankbyte/screen/contacts_form.dart';
 import 'package:bankbyte/screen/transaction.dart';
 import 'package:bankbyte/screen/transaction_form.dart';
 import 'package:flutter/material.dart';
-import 'package:bankbyte/database/app_database.dart';
 
 class ContactsList extends StatefulWidget {
   @override
