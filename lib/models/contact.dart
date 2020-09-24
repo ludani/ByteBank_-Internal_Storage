@@ -23,6 +23,4 @@ class Contact {
         'name': name,
         'accountNumber': accountNumber,
       };
-
-  static fromJson(json) {}
 }

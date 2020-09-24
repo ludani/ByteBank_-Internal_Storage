@@ -1,6 +1,5 @@
 import 'package:bankbyte/components/centered_message.dart';
 import 'package:bankbyte/components/progress.dart';
-import 'package:bankbyte/http/app_database.dart';
 import 'package:bankbyte/http/webclients/transaction_webclient.dart';
 
 import 'package:bankbyte/screen/transaction.dart';
